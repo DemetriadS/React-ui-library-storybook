@@ -1,0 +1,33 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  margin: 0 128px;
+}
+
+.highlights {
+  flex-direction: row !important;
+  justify-content: space-between;
+  margin-top: 48px;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column !important;
+  }
+}
+
+.box-header {
+  flex-direction: row !important;
+}
+
+@media (max-width: 768px) {
+  .box-header {
+    flex-direction: column-reverse !important;
+  }
+}

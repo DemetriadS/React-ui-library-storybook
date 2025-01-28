@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "node", // Ensure module resolution works properly
+    "esModuleInterop": true, // This allows default imports from non-ESM modules
+    "module": "esnext", // Use ES module system
+    "target": "esnext", // Set a modern JavaScript target
+    "types": ["jest", "vite/client"] // Ensure jest types are included
+  }
+}

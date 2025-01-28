@@ -1,0 +1,40 @@
+.data-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+}
+
+.data-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    flex: 0 0 100%;
+  }
+}
+
+.filter-section {
+  background-color: #1b1b1b;
+  padding: 16px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1023px) {
+  .filter-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gender-filter {
+  margin-top: 20px;
+  display: flex;
+  align-self: flex-end;
+  align-items: baseline;
+}

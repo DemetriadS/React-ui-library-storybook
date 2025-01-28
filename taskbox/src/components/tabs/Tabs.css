@@ -1,0 +1,35 @@
+.tabs {
+  display: flex;
+}
+
+.tabs.centered .tab-buttons {
+  justify-content: center;
+}
+
+.tabs.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabs.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-content {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tabs.vertical .tab-indicator {
+  width: 3px;
+  height: 100%;
+  bottom: auto;
+  right: 0;
+}

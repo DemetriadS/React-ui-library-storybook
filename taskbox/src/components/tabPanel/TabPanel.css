@@ -1,0 +1,17 @@
+.tab-panel {
+  display: flex;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 32px 0;
+  align-self: center;
+  width: 100%;
+}
+
+.tab-panel.horizontal {
+  display: flex;
+  max-height: none;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 32px;
+  align-self: center;
+}

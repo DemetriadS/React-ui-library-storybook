@@ -1,0 +1,37 @@
+.input-container {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  color: black;
+}
+
+.input-field {
+  height: 48px !important;
+  padding: 8px 12px !important;
+  font-size: 16px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.input-field.error {
+  border: 2px solid #ed2939 !important;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.3);
+}
+
+.error-message {
+  color: #ed2939;
+  font-size: 14px;
+  margin-top: 4px;
+}
