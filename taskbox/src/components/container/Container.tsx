@@ -1,10 +1,6 @@
 import React from "react";
 import "./Container.css";
-
-interface ContainerProps {
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}
+import { ContainerProps } from "../../types";
 
 const Container: React.FC<ContainerProps> = ({ children, style }) => {
   return (

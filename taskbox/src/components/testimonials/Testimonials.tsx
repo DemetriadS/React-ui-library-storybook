@@ -3,19 +3,7 @@ import { Typography, Icon, Box, Button } from "../";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import "./Testimonials.css";
 import { PLACEHOLDER_TEXTS } from "../../utils/constants";
-
-interface Testimonial {
-  avatar: string;
-  name: string;
-  designation: string;
-  feedback: string;
-}
-
-interface TestimonialsProps {
-  testimonials: Testimonial[];
-  cardWidth?: string;
-  style?: React.CSSProperties;
-}
+import { TestimonialsProps } from "../../types";
 
 const Testimonials: React.FC<TestimonialsProps> = ({
   testimonials,

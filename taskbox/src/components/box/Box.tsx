@@ -1,11 +1,5 @@
 import React from "react";
-
-interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-  justifyContent?: React.CSSProperties["justifyContent"];
-  alignItems?: React.CSSProperties["alignItems"];
-  flexDirection?: React.CSSProperties["flexDirection"];
-}
+import { BoxProps } from "../../types";
 
 const Box: React.FC<BoxProps> = ({
   children,

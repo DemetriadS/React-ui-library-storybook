@@ -1,14 +1,9 @@
 import React from "react";
-import { User } from "../../types";
+import { UserCardProps } from "../../types";
 import { Typography, Icon } from "../index";
 import "./UserCard.css";
 import { USER_CARD_TEXT } from "../../utils/constants";
 import { useVisibilitySensor } from "../../hooks/useVisibilitySensor";
-
-interface UserCardProps {
-  user: User;
-  style?: React.CSSProperties;
-}
 
 const UserCard: React.FC<UserCardProps> = ({ user, style }) => {
   const { isVisible, elementRef } = useVisibilitySensor();

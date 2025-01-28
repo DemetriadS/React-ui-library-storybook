@@ -1,11 +1,7 @@
 import React from "react";
 import { useTabsContext } from "../tabs/Tabs";
 import "./TabList.css";
-
-interface TabListProps {
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}
+import { TabListProps } from "../../types";
 
 const TabList: React.FC<TabListProps> = ({ children, style }) => {
   const { orientation, centered, backgroundColor } = useTabsContext();

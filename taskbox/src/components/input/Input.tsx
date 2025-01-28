@@ -1,15 +1,6 @@
 import React, { ChangeEvent } from "react";
 import "./Input.css";
-
-interface InputProps {
-  type: "text" | "number";
-  value: string | number;
-  onChange: (value: string | (number | "")) => void;
-  placeholder?: string;
-  label?: string;
-  error?: string;
-  style?: React.CSSProperties;
-}
+import { InputProps } from "../../types";
 
 const Input: React.FC<InputProps> = ({
   type,

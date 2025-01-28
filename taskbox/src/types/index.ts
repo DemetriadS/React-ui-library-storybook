@@ -1,5 +1,58 @@
 import { ReactNode } from "react";
 
+export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  justifyContent?: React.CSSProperties["justifyContent"];
+  alignItems?: React.CSSProperties["alignItems"];
+  flexDirection?: React.CSSProperties["flexDirection"];
+}
+
+export interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "contained" | "outline";
+  size?: "small" | "medium" | "large";
+  disabled?: boolean;
+  className?: string;
+  href?: string;
+  style?: React.CSSProperties;
+}
+
+export interface CheckboxProps {
+  label?: string;
+  checked: boolean;
+  labelColor?: string;
+  onChange: (checked: boolean) => void;
+}
+
+export interface DataListProps {
+  style?: React.CSSProperties;
+  userCardStyle?: React.CSSProperties;
+}
+
+export interface ContainerProps {
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}
+
+export interface IconProps {
+  src: string;
+  alt?: string;
+  size?: number;
+  style?: React.CSSProperties;
+}
+
+export interface InputProps {
+  type: "text" | "number";
+  value: string | number;
+  onChange: (value: string | (number | "")) => void;
+  placeholder?: string;
+  label?: string;
+  error?: string;
+  style?: React.CSSProperties;
+}
+
 export type TabProps = {
   index: number;
   isActive?: boolean;
@@ -13,6 +66,11 @@ export type TabProps = {
   label?: string;
   value?: any;
 };
+
+export interface TabListProps {
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}
 
 export interface TabsProps {
   children: ReactNode;
@@ -40,6 +98,24 @@ export interface TabPanelProps {
   style?: React.CSSProperties;
   orientation?: "horizontal" | "vertical";
   children: ReactNode;
+}
+
+interface Testimonial {
+  avatar: string;
+  name: string;
+  designation: string;
+  feedback: string;
+}
+
+export interface TestimonialsProps {
+  testimonials: Testimonial[];
+  cardWidth?: string;
+  style?: React.CSSProperties;
+}
+
+export interface UserCardProps {
+  user: User;
+  style?: React.CSSProperties;
 }
 
 export interface User {

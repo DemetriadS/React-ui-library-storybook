@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useDataFetch from "../../hooks/useDataFetch";
-import { User, Filters } from "../../types";
+import { User, Filters, DataListProps } from "../../types";
 import {
   API_URL,
   ERROR_MESSAGES,
@@ -10,11 +10,6 @@ import { Typography, UserCard, Input, Checkbox } from "../";
 import filterUsers from "./filterUsers";
 import "./DataList.css";
 import validationSchema from "../../helpers/validationSchema";
-
-interface DataListProps {
-  style?: React.CSSProperties;
-  userCardStyle?: React.CSSProperties;
-}
 
 const DataList: React.FC<DataListProps> = ({ style, userCardStyle }) => {
   const { data, error, loading } = useDataFetch<{ results: User[] }>(API_URL);

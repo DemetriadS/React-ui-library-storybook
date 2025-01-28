@@ -1,11 +1,5 @@
-import React, { CSSProperties } from "react";
-
-interface IconProps {
-  src: string;
-  alt?: string;
-  size?: number;
-  style?: CSSProperties;
-}
+import React from "react";
+import { IconProps } from "../../types";
 
 const Icon: React.FC<IconProps> = ({ src, alt = "icon", size = 24, style }) => {
   return (

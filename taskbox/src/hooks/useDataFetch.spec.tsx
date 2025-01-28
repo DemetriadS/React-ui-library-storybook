@@ -1,7 +1,7 @@
 import React from "react";
 
 import { render, screen, waitFor } from "@testing-library/react";
-import { useDataFetch } from "./useDataFetch";
+import useDataFetch from "./useDataFetch";
 import { API_URL } from "../utils/constants";
 
 global.fetch = jest.fn();

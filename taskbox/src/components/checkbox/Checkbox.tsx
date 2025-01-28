@@ -1,12 +1,6 @@
 import React from "react";
 import "./Checkbox.css";
-
-interface CheckboxProps {
-  label?: string;
-  checked: boolean;
-  labelColor?: string;
-  onChange: (checked: boolean) => void;
-}
+import { CheckboxProps } from "../../types";
 
 const Checkbox: React.FC<CheckboxProps> = ({
   label,
