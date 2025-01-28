@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { TypographyProps } from "../../types";
 
 const elementMap: Record<
-  keyof TypographyProps["variant"],
+  TypographyProps["variant"],
   keyof JSX.IntrinsicElements
 > = {
   h1: "h1",

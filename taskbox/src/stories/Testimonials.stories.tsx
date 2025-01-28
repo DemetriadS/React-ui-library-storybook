@@ -1,7 +1,8 @@
 import React from "react";
 import { Testimonials } from "../components";
-import { Box } from "../components";
 import { testimonialsData } from "../data/testimonialsData";
+
+type TestimonialsProps = React.ComponentProps<typeof Testimonials>;
 
 export default {
   title: "Example/Testimonials",
@@ -26,7 +27,9 @@ export default {
   },
 };
 
-export const Default = (args) => <Testimonials cardWidth="140px" {...args} />;
+export const Default = (args: TestimonialsProps) => (
+  <Testimonials cardWidth="140px" {...args} />
+);
 
 Default.args = {
   testimonials: testimonialsData,

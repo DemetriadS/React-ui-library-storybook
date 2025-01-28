@@ -1,11 +1,11 @@
 module.exports = {
-  preset: "vite-jest", // Use vite-jest preset
-  testEnvironment: "jsdom", // Use jsdom for React testing
+  preset: "vite-jest",
+  testEnvironment: "jsdom",
   transform: {
-    "^.+\\.tsx?$": "ts-jest", // Handle TypeScript files
+    "^.+\\.tsx?$": "ts-jest",
   },
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1", // Map aliases (if you have any) like @/ to src/
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
-  testPathIgnorePatterns: ["/node_modules/", "/dist/"], // Ignore test files in node_modules or dist
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"],
 };

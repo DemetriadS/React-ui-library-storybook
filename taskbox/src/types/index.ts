@@ -176,7 +176,7 @@ export interface User {
 }
 
 export interface TypographyProps {
-  variant?:
+  variant:
     | "h1"
     | "h2"
     | "h3"
@@ -188,10 +188,10 @@ export interface TypographyProps {
     | "subtitle2"
     | "body1"
     | "body2";
-  textColor?: string;
   className?: string;
+  textColor?: string;
   style?: React.CSSProperties;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 export interface Filters {
   name: string;

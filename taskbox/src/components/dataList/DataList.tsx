@@ -65,7 +65,10 @@ const DataList: React.FC<DataListProps> = ({ style, userCardStyle }) => {
     },
   ];
 
-  const handleInputChange = async (key: string, value: string | number) => {
+  const handleInputChange = async (
+    key: keyof Filters,
+    value: string | number
+  ) => {
     if (!value) {
       setErrors((prev) => ({
         ...prev,
@@ -82,7 +85,7 @@ const DataList: React.FC<DataListProps> = ({ style, userCardStyle }) => {
         if (err) {
           setErrors((prev) => ({
             ...prev,
-            [key]: err.message,
+            [key]: (err as Error).message,
           }));
         }
       }
@@ -118,6 +121,7 @@ const DataList: React.FC<DataListProps> = ({ style, userCardStyle }) => {
   return (
     <div className="data-list-container" style={style}>
       <Typography
+        variant="h1"
         style={{
           fontSize: "48px",
           fontWeight: "bold",
@@ -133,11 +137,11 @@ const DataList: React.FC<DataListProps> = ({ style, userCardStyle }) => {
             style={{ color: "#fff" }}
             key={key}
             type={type as "number" | "text"}
-            value={filters[key]}
-            onChange={(value) => handleInputChange(key, value)}
+            value={filters[key as keyof Filters]}
+            onChange={(value) => handleInputChange(key as keyof Filters, value)}
             placeholder={placeholder}
             label={label}
-            error={errors[key]}
+            error={errors[key as keyof Filters]}
           />
         ))}
 
